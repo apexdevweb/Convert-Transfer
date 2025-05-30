@@ -4,6 +4,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  /*responsive*/
 }
 body header {
   display: flex;
@@ -12,7 +13,7 @@ body header {
   justify-content: center;
   margin-top: 0;
   height: auto;
-  width: 100%;
+  width: 100vw;
   background: radial-gradient(circle, rgb(213, 110, 110) 0%, rgb(148, 187, 233) 100%);
   overflow: hidden;
 }
@@ -177,33 +178,38 @@ body main .main_content .login__container .sign__field form {
 body main .main_content .home__container .sign__field form label,
 body main .main_content .signup__container .sign__field form label,
 body main .main_content .login__container .sign__field form label {
+  letter-spacing: 2px;
   font-family: "Bebas Neue", serif;
 }
-body main .main_content .home__container .sign__field form input[type=text], body main .main_content .home__container .sign__field form input[type=email], body main .main_content .home__container .sign__field form input[type=tel], body main .main_content .home__container .sign__field form input[type=date], body main .main_content .home__container .sign__field form select,
+body main .main_content .home__container .sign__field form input[type=text], body main .main_content .home__container .sign__field form input[type=email], body main .main_content .home__container .sign__field form input[type=tel], body main .main_content .home__container .sign__field form input[type=date], body main .main_content .home__container .sign__field form input[type=password], body main .main_content .home__container .sign__field form select,
 body main .main_content .signup__container .sign__field form input[type=text],
 body main .main_content .signup__container .sign__field form input[type=email],
 body main .main_content .signup__container .sign__field form input[type=tel],
 body main .main_content .signup__container .sign__field form input[type=date],
+body main .main_content .signup__container .sign__field form input[type=password],
 body main .main_content .signup__container .sign__field form select,
 body main .main_content .login__container .sign__field form input[type=text],
 body main .main_content .login__container .sign__field form input[type=email],
 body main .main_content .login__container .sign__field form input[type=tel],
 body main .main_content .login__container .sign__field form input[type=date],
+body main .main_content .login__container .sign__field form input[type=password],
 body main .main_content .login__container .sign__field form select {
   height: 2.5vh;
   width: 15vw;
   background: transparent;
   border-radius: 10px;
   border: 1px solid #fff;
-  color: #fff;
+  color: #000;
 }
-body main .main_content .home__container .sign__field form input[type=text]:focus, body main .main_content .home__container .sign__field form input[type=email]:focus, body main .main_content .home__container .sign__field form input[type=tel]:focus,
+body main .main_content .home__container .sign__field form input[type=text]:focus, body main .main_content .home__container .sign__field form input[type=email]:focus, body main .main_content .home__container .sign__field form input[type=tel]:focus, body main .main_content .home__container .sign__field form input[type=password]:focus,
 body main .main_content .signup__container .sign__field form input[type=text]:focus,
 body main .main_content .signup__container .sign__field form input[type=email]:focus,
 body main .main_content .signup__container .sign__field form input[type=tel]:focus,
+body main .main_content .signup__container .sign__field form input[type=password]:focus,
 body main .main_content .login__container .sign__field form input[type=text]:focus,
 body main .main_content .login__container .sign__field form input[type=email]:focus,
-body main .main_content .login__container .sign__field form input[type=tel]:focus {
+body main .main_content .login__container .sign__field form input[type=tel]:focus,
+body main .main_content .login__container .sign__field form input[type=password]:focus {
   background-color: #fff;
 }
 body main .main_content .home__container .sign__field form input[type=submit],
@@ -244,7 +250,7 @@ body footer .foot__container {
 }
 body footer .foot__container .foot__container--sub {
   height: auto;
-  width: 100%;
+  width: 30vw;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -255,7 +261,25 @@ body footer .foot__container .foot__container--sub img {
   width: auto;
   filter: drop-shadow(0px 0px 3px #000);
 }
-@media (min-width: 600px) {
+@media (max-width: 600px) {
+  body .nav__ul {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+  body .header__title {
+    font-weight: 400;
+    height: auto;
+    width: 20ch;
+    letter-spacing: 2px;
+    font-family: "Orbitron", serif;
+    font-size: 1rem;
+    color: #fff;
+    text-shadow: 0px 0px 5px #000;
+  }
+}
+@media (min-width: 601px) {
   body .nav__ul {
     display: flex;
     flex-flow: row nowrap;

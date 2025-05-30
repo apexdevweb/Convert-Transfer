@@ -58,13 +58,20 @@
             <input type="text" placeholder="Nom" name="">
             <input type="text" placeholder="Prenom" name="">
             <input type="email" placeholder="E-mail" name="">
+            <input type="password" placeholder="Password" minlength="8" maxlength="16" name="">
+            <input type="password" placeholder="confirm-password" name="">
             <input type="tel" placeholder="tel" name="">
             <label for="dtnsce">Votre date de naissance</label>
             <input type="date" placeholder="date de naissance" name="dtnsce">
             <label for="country">Pays de résidence</label>
             <select name="country" id="">
               <option value="..." selected>...</option>
-              <option value=""></option>
+              <option value="France">France</option>
+              <option value="Belgique">Belgique</option>
+              <option value="Allemagne">Allemagne</option>
+              <option value="Hollande">Hollande</option>
+              <option value="Luxembourg">Luxembourg</option>
+              <option value="Angleterre">Angleterre</option>
             </select>
             <input type="submit" value="Signup" name="">
           </form>
@@ -74,6 +81,14 @@
     <section id="contact" class="main_content">
       <div class="login__container">
         <h2 class="main__subtitle">Login</h2>
+        <fieldset class="sign__field">
+          <legend>Connexion</legend>
+          <form method="post">
+            <input type="email" placeholder="E-mail" name="user_mail">
+            <input type="password" placeholder="Password">
+            <input type="submit" value="Connexion" name="">
+          </form>
+        </fieldset>
       </div>
     </section>
     <hr class="main__hr--C" />
@@ -85,9 +100,9 @@
       <strong class="copyright">© by Script'Enjoyer</strong>
       <aside class="foot__container--sub">
         <img src="assets/image/securite-internet.png" alt="pageprotect">
-        <caption>Protected page</caption>
+        <caption class="foot__caption">Protected page</caption>
         <img src="assets/image/qualite.png" alt="certified">
-        <caption>Certified</caption>
+        <caption class="foot__caption">Certified</caption>
       </aside>
     </div>
   </footer>
