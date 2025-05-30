@@ -80,9 +80,7 @@ body main .main_content {
 body main .main_content .home__container,
 body main .main_content .signup__container,
 body main .main_content .login__container {
-  margin: 0;
-  padding: 0;
-  height: 65vh;
+  height: 50vh;
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -127,7 +125,7 @@ body main .main_content .signup__container .main__article--container,
 body main .main_content .login__container .main__article--container {
   margin: 0;
   padding: 0;
-  height: 50vh;
+  height: auto;
   width: auto;
   display: flex;
   flex-flow: row nowrap;
@@ -141,12 +139,12 @@ body main .main_content .login__container .main__article--container .main__info-
   height: 35vh;
   width: auto;
   border-radius: 50%;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 body main .main_content .home__container .sign__field,
 body main .main_content .signup__container .sign__field,
 body main .main_content .login__container .sign__field {
-  height: 45vh;
+  height: 35vh;
   width: auto;
   display: flex;
   flex-flow: column nowrap;
@@ -167,30 +165,21 @@ body main .main_content .login__container .sign__field legend {
 body main .main_content .home__container .sign__field form,
 body main .main_content .signup__container .sign__field form,
 body main .main_content .login__container .sign__field form {
-  height: 43vh;
+  height: 24vh;
   width: auto;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
-body main .main_content .home__container .sign__field form label,
-body main .main_content .signup__container .sign__field form label,
-body main .main_content .login__container .sign__field form label {
-  font-family: "Bebas Neue", serif;
-}
-body main .main_content .home__container .sign__field form input[type=text], body main .main_content .home__container .sign__field form input[type=email], body main .main_content .home__container .sign__field form input[type=tel], body main .main_content .home__container .sign__field form input[type=date], body main .main_content .home__container .sign__field form select,
+body main .main_content .home__container .sign__field form input[type=text], body main .main_content .home__container .sign__field form input[type=email], body main .main_content .home__container .sign__field form input[type=tel],
 body main .main_content .signup__container .sign__field form input[type=text],
 body main .main_content .signup__container .sign__field form input[type=email],
 body main .main_content .signup__container .sign__field form input[type=tel],
-body main .main_content .signup__container .sign__field form input[type=date],
-body main .main_content .signup__container .sign__field form select,
 body main .main_content .login__container .sign__field form input[type=text],
 body main .main_content .login__container .sign__field form input[type=email],
-body main .main_content .login__container .sign__field form input[type=tel],
-body main .main_content .login__container .sign__field form input[type=date],
-body main .main_content .login__container .sign__field form select {
-  height: 2.5vh;
+body main .main_content .login__container .sign__field form input[type=tel] {
+  height: 3vh;
   width: 15vw;
   background: transparent;
   border-radius: 10px;
@@ -204,23 +193,6 @@ body main .main_content .signup__container .sign__field form input[type=tel]:foc
 body main .main_content .login__container .sign__field form input[type=text]:focus,
 body main .main_content .login__container .sign__field form input[type=email]:focus,
 body main .main_content .login__container .sign__field form input[type=tel]:focus {
-  background-color: #fff;
-}
-body main .main_content .home__container .sign__field form input[type=submit],
-body main .main_content .signup__container .sign__field form input[type=submit],
-body main .main_content .login__container .sign__field form input[type=submit] {
-  height: 3vh;
-  width: 6vw;
-  border-radius: 5px;
-  color: #000;
-  background: transparent;
-  font-size: 1.2rem;
-}
-body main .main_content .home__container .sign__field form input[type=submit]:hover,
-body main .main_content .signup__container .sign__field form input[type=submit]:hover,
-body main .main_content .login__container .sign__field form input[type=submit]:hover {
-  transition: 0.3s ease;
-  transform: scale(1.09);
   background-color: #fff;
 }
 body footer {
