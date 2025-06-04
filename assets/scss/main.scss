@@ -36,7 +36,7 @@ body {
     justify-content: center;
     margin-top: 0;
     height: auto;
-    width: 100vw;
+    width: 100%;
     background: radial-gradient(
       circle,
       rgba(213, 110, 110, 1) 0%,
@@ -277,11 +277,6 @@ body {
   }
   //////////////////////MIXIN//////////////////
   @mixin breakpoint($point) {
-    @if $point == small {
-      @media (max-width: 600px) {
-        @content;
-      }
-    }
     @if $point == medium {
       @media (min-width: 601px) {
         @content;
@@ -294,25 +289,6 @@ body {
     }
   }
   /*responsive*/
-  @include breakpoint(small) {
-    .nav__ul {
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: flex-start;
-      justify-content: space-evenly;
-    }
-     .header__title {
-      font-weight: 400;
-      height: auto;
-      width: 20ch;
-      letter-spacing: 2px;
-      font-family: $font-primary;
-      font-size:1rem;
-      color: #fff;
-      text-shadow: $header-txt-shad;
-    }
-  }
-
   @include breakpoint(medium) {
     .nav__ul {
       display: flex;
