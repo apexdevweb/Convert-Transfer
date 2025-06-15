@@ -23,6 +23,7 @@ $standar-font-size: 1.2rem;
 $medium-font-size: 1.7rem;
 $big-font-size: 2.9rem;
 $header-txt-shad: 0px 0px 5px #000;
+$with-txt-shad: 0px 0px 3px #fff;
 
 body {
   margin: 0;
@@ -80,6 +81,22 @@ body {
     }
   }
   & main {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    & .vid__container {
+      height: 80vh;
+      width: 100%;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+      & .main__info--vid {
+        margin: 0;
+        height: auto;
+        width: 100%;
+        opacity: 0.8;
+      }
+    }
     & .main__hr--A {
       height: 0.5vh;
       width: 70vw;
@@ -90,6 +107,7 @@ body {
         rgba(213, 110, 110, 1) 0%,
         rgba(148, 187, 233, 1) 100%
       );
+      filter: drop-shadow(0px 0px 3px #000);
     }
     & .main__hr--B {
       height: 0.5vh;
@@ -101,6 +119,7 @@ body {
         rgba(213, 110, 110, 1) 0%,
         rgba(148, 187, 233, 1) 100%
       );
+      filter: drop-shadow(0px 0px 3px #000);
     }
     & .main__hr--C {
       height: 0.5vh;
@@ -112,16 +131,13 @@ body {
         rgba(213, 110, 110, 1) 0%,
         rgba(148, 187, 233, 1) 100%
       );
+      filter: drop-shadow(0px 0px 3px #000);
     }
 
     & .main_content {
       height: auto;
       width: 100%;
-      background: radial-gradient(
-        circle,
-        rgba(213, 110, 110, 1) 0%,
-        rgba(148, 187, 233, 1) 100%
-      );
+      overflow: hidden;
       & .home__container,
       .signup__container,
       .login__container {
@@ -144,10 +160,11 @@ body {
           font-family: $font-tertiary;
           letter-spacing: 2px;
           line-height: 50px;
+          color: #fff;
+          text-shadow: $header-txt-shad;
         }
         & .main__info--txt > span {
           font-family: $font-primary;
-          text-shadow: $header-txt-shad;
           font-size: 5rem;
           color: #fff;
         }
@@ -156,27 +173,20 @@ body {
           word-spacing: 2px;
           font-size: $medium-font-size;
           border-bottom: 3px solid #000;
-          color: #fff;
+          color: rgb(151, 204, 227);
         }
         & .main__article--container {
           margin: 0;
           padding: 0;
           height: 50vh;
-          width: auto;
+          width: 100%;
           display: flex;
           flex-flow: row nowrap;
           align-items: center;
           justify-content: space-around;
-          & .main__info--img {
-            margin: 0;
-            height: 35vh;
-            width: auto;
-            border-radius: 50%;
-            opacity: 0.7;
-          }
         }
         & .sign__field {
-          height: 45vh;
+          height: 46vh;
           width: auto;
           display: flex;
           flex-flow: column nowrap;
@@ -184,12 +194,15 @@ body {
           justify-content: space-around;
           border-radius: 10px;
           padding: 5px;
+          background-color: rgba(255, 255, 255, 0.805);
           & legend {
             font-size: $medium-font-size;
             font-family: $font-secondary;
-            color: #fff;
+            color: #000;
             letter-spacing: 2px;
             text-align: center;
+            text-decoration: underline;
+            text-shadow: $with-txt-shad;
           }
           & form {
             height: 43vh;
@@ -232,11 +245,104 @@ body {
             & input[type="submit"]:hover {
               transition: 0.3s ease;
               transform: scale(1.09);
-              background-color: #fff;
+              background-color: #000;
+              color: #fff;
             }
           }
         }
       }
+    }
+    & .interface__container--primary {
+      height: auto;
+      width: 100%;
+      margin: 0;
+      padding: 5px;
+      background: radial-gradient(
+        circle,
+        rgba(213, 110, 110, 1) 0%,
+        rgba(148, 187, 233, 1) 100%
+      );
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-evenly;
+      & .identitie__infos {
+        height: 50vh;
+        width: 25vw;
+        padding-left: 8px;
+        border: 3px solid #fff;
+        border-radius: 10px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        font-size: $standar-font-size;
+        font-family: $font-secondary;
+        color: #000;
+        letter-spacing: 2px;
+        font-weight: 300;
+      
+        & .identitie_name--group {
+          height: auto;
+          width: 100%;
+          display: flex;
+          flex-flow: row nowrap;
+          align-items: center;
+          justify-content: space-evenly;
+        }
+        
+      }
+      & .solde__utilisateur{
+        height: 50vh;
+        width: 25vw;
+        padding-left: 8px;
+        border: 3px solid #fff;
+        border-radius: 10px;
+        font-family: $font-secondary;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-evenly;
+         & h4{
+          letter-spacing: 2px;
+          margin: 0;
+          font-size: $medium-font-size;
+          text-decoration: underline;
+         }
+         & p{
+          letter-spacing: 2px;
+          margin: 0;
+          font-size: $medium-font-size;
+         }
+       }
+       & .transaction__infos{
+        height: 50vh;
+        width: 25vw;
+        padding: 3px;
+        border: 3px solid #fff;
+        border-radius: 10px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-evenly;
+        font-family: $font-secondary;
+        & h2{
+          letter-spacing: 2px;
+          margin: 0;
+          font-size: $medium-font-size;
+          text-decoration: underline;
+        }
+
+        & .transaction__listing{
+          height: 15vh;
+          width: 22vw;
+          background-color: #fff;
+          border-radius: 10px;
+          overflow-y: scroll;
+          overflow-x: hidden;
+
+        }
+       }
     }
   }
   & footer {
@@ -278,7 +384,7 @@ body {
   //////////////////////MIXIN//////////////////
   @mixin breakpoint($point) {
     @if $point == medium {
-      @media (min-width: 601px) {
+      @media (min-width: 600px) {
         @content;
       }
     }
