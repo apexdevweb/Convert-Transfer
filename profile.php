@@ -48,15 +48,15 @@ require "include/head.php";
                 </div>
                 <article class="transaction__infos">
                     <h2>Historique des transactions</h2>
-                    <div class="transaction__listing">
+                    <div class="transaction__listing" id="listing">
 
                     </div>
                 </article>
                 <fieldset class="founds__field">
                     <legend>Ajouter des fonds</legend>
-                    <form method="POST">
+                    <form method="POST" id="formfound">
                         <label for="cash_device">Choix de la devise</label>
-                        <select name="cash_device" id="">
+                        <select name="cash_device" id="devicetype">
                             <option value="USD">USD - United States Dollar</option>
                             <option value="EUR">EUR - Euro</option>
                             <option value="JPY">JPY - Japanese Yen</option>
@@ -94,8 +94,8 @@ require "include/head.php";
                             <option value="RON">RON - Romanian Leu</option>
                             <option value="PKR">PKR - Pakistani Rupee</option>
                         </select>
-                        <input type="number" name="solde_quantity" placeholder="Montant">
-                        <input type="submit" value="+" name="add">
+                        <input type="number" name="solde_quantity" placeholder="Montant" id="soldadd">
+                        <input type="submit" value="+" name="add" id="addfounds">
                     </form>
                 </fieldset>
             </div>
@@ -115,6 +115,7 @@ require "include/head.php";
             </aside>
         </div>
     </footer>
+    <script src="assets/js/solde.js"></script>
 </body>
 
 </html>
