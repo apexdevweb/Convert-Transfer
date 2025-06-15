@@ -247,7 +247,7 @@ body main .main_content .login__container .sign__field form input[type=submit]:h
   color: #fff;
 }
 body main .interface__container--primary {
-  height: auto;
+  height: 65vh;
   width: 100%;
   margin: 0;
   padding: 5px;
@@ -258,8 +258,8 @@ body main .interface__container--primary {
   justify-content: space-evenly;
 }
 body main .interface__container--primary .identitie__infos {
-  height: 50vh;
-  width: 25vw;
+  height: 45vh;
+  width: 20vw;
   padding-left: 8px;
   border: 3px solid #fff;
   border-radius: 10px;
@@ -282,8 +282,8 @@ body main .interface__container--primary .identitie__infos .identitie_name--grou
   justify-content: space-evenly;
 }
 body main .interface__container--primary .solde__utilisateur {
-  height: 50vh;
-  width: 25vw;
+  height: 45vh;
+  width: 20vw;
   padding-left: 8px;
   border: 3px solid #fff;
   border-radius: 10px;
@@ -305,8 +305,8 @@ body main .interface__container--primary .solde__utilisateur p {
   font-size: 1.7rem;
 }
 body main .interface__container--primary .transaction__infos {
-  height: 50vh;
-  width: 25vw;
+  height: 45vh;
+  width: 20vw;
   padding: 3px;
   border: 3px solid #fff;
   border-radius: 10px;
@@ -323,12 +323,61 @@ body main .interface__container--primary .transaction__infos h2 {
   text-decoration: underline;
 }
 body main .interface__container--primary .transaction__infos .transaction__listing {
-  height: 15vh;
-  width: 22vw;
+  height: 20vh;
+  width: 18vw;
   background-color: #fff;
-  border-radius: 10px;
   overflow-y: scroll;
   overflow-x: hidden;
+}
+body main .interface__container--primary .founds__field {
+  height: 45vh;
+  width: auto;
+  border-radius: 10px;
+}
+body main .interface__container--primary .founds__field legend {
+  font-size: 1.7rem;
+  font-family: "Bebas Neue", serif;
+  text-align: center;
+  letter-spacing: 2px;
+  text-decoration: underline;
+}
+body main .interface__container--primary .founds__field form {
+  background-color: #000;
+  height: 40vh;
+  width: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 10px;
+}
+body main .interface__container--primary .founds__field form label {
+  letter-spacing: 1px;
+  font-family: "Bebas Neue", serif;
+  color: #fff;
+}
+body main .interface__container--primary .founds__field form select {
+  height: 3vh;
+  width: 8vw;
+}
+body main .interface__container--primary .founds__field form input[type=number] {
+  height: 3vh;
+  width: 8vw;
+}
+body main .interface__container--primary .founds__field form input[type=submit] {
+  text-align: center;
+  height: 7vh;
+  width: 5vw;
+  border-radius: 10px;
+  font-size: 2.9rem;
+  border: 2px solid cornflowerblue;
+  background-color: #000;
+  color: #fff;
+}
+body main .interface__container--primary .founds__field form input[type=submit]:hover {
+  transition: 0.3s ease;
+  filter: drop-shadow(0px 0px 5px cornflowerblue);
+  color: greenyellow;
 }
 body footer {
   position: relative;
@@ -374,7 +423,7 @@ body footer .foot__container .foot__container--sub img {
   body .nav__ul {
     display: flex;
     flex-flow: row nowrap;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-evenly;
   }
 }

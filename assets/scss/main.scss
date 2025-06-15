@@ -253,7 +253,7 @@ body {
       }
     }
     & .interface__container--primary {
-      height: auto;
+      height: 65vh;
       width: 100%;
       margin: 0;
       padding: 5px;
@@ -267,8 +267,8 @@ body {
       align-items: center;
       justify-content: space-evenly;
       & .identitie__infos {
-        height: 50vh;
-        width: 25vw;
+        height: 45vh;
+        width: 20vw;
         padding-left: 8px;
         border: 3px solid #fff;
         border-radius: 10px;
@@ -281,7 +281,7 @@ body {
         color: #000;
         letter-spacing: 2px;
         font-weight: 300;
-      
+
         & .identitie_name--group {
           height: auto;
           width: 100%;
@@ -290,11 +290,10 @@ body {
           align-items: center;
           justify-content: space-evenly;
         }
-        
       }
-      & .solde__utilisateur{
-        height: 50vh;
-        width: 25vw;
+      & .solde__utilisateur {
+        height: 45vh;
+        width: 20vw;
         padding-left: 8px;
         border: 3px solid #fff;
         border-radius: 10px;
@@ -303,21 +302,21 @@ body {
         flex-flow: column nowrap;
         align-items: center;
         justify-content: space-evenly;
-         & h4{
+        & h4 {
           letter-spacing: 2px;
           margin: 0;
           font-size: $medium-font-size;
           text-decoration: underline;
-         }
-         & p{
+        }
+        & p {
           letter-spacing: 2px;
           margin: 0;
           font-size: $medium-font-size;
-         }
-       }
-       & .transaction__infos{
-        height: 50vh;
-        width: 25vw;
+        }
+      }
+      & .transaction__infos {
+        height: 45vh;
+        width: 20vw;
         padding: 3px;
         border: 3px solid #fff;
         border-radius: 10px;
@@ -326,23 +325,71 @@ body {
         align-items: center;
         justify-content: space-evenly;
         font-family: $font-secondary;
-        & h2{
+        & h2 {
           letter-spacing: 2px;
           margin: 0;
           font-size: $medium-font-size;
           text-decoration: underline;
         }
 
-        & .transaction__listing{
-          height: 15vh;
-          width: 22vw;
+        & .transaction__listing {
+          height: 20vh;
+          width: 18vw;
           background-color: #fff;
-          border-radius: 10px;
           overflow-y: scroll;
           overflow-x: hidden;
-
         }
-       }
+      }
+      & .founds__field {
+        height: 45vh;
+        width: auto;
+        border-radius: 10px;
+        & legend {
+          font-size: $medium-font-size;
+          font-family: $font-secondary;
+          text-align: center;
+          letter-spacing: 2px;
+          text-decoration: underline;
+        }
+        & form {
+          background-color: #000;
+          height: 40vh;
+          width: auto;
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: center;
+          justify-content: space-evenly;
+          border-radius: 10px;
+          & label {
+            letter-spacing: 1px;
+            font-family: $font-secondary;
+            color: #fff;
+          }
+          & select {
+            height: 3vh;
+            width: 8vw;
+          }
+          & input[type="number"] {
+            height: 3vh;
+            width: 8vw;
+          }
+          & input[type="submit"] {
+            text-align: center;
+            height: 7vh;
+            width: 5vw;
+            border-radius: 10px;
+            font-size: $big-font-size;
+            border: 2px solid cornflowerblue;
+            background-color: #000;
+            color: #fff;
+          }
+          & input[type="submit"]:hover {
+            transition: 0.3s ease;
+            filter: drop-shadow(0px 0px 5px cornflowerblue);
+            color: greenyellow;
+          }
+        }
+      }
     }
   }
   & footer {
@@ -407,7 +454,7 @@ body {
     .nav__ul {
       display: flex;
       flex-flow: row nowrap;
-      align-items: flex-start;
+      align-items: center;
       justify-content: space-evenly;
     }
   }
