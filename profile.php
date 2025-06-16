@@ -1,6 +1,8 @@
 <?php
 require "backend/security/sessionSecure.php";
+require "backend/script/solde/solde.php";
 require "include/title.php";
+var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -11,17 +13,9 @@ require "include/head.php";
 
 <body>
     <header>
-        <h1 class="header__title"><?= $main_title ?></h1>
-        <nav class="header__nav">
-            <ul class="nav__ul">
-                <li class="nav__li">
-                    <p class="nav__li--link">Bonjour: <?= $_SESSION['user_data']['usr_last_name'] ?></p>
-                </li>
-                <li class="nav__li">
-                    <a class="nav__li--link" href="backend/security/logout.php">Logout</a>
-                </li>
-            </ul>
-        </nav>
+        <?php
+        include "include/navProfil.php";
+        ?>
     </header>
     <main>
         <div class="vid__container">
@@ -32,6 +26,13 @@ require "include/head.php";
         <hr class="main__hr--C" />
         <section class="user__interface--container">
             <div class="interface__container--primary">
+                <?php
+                if (isset($soldeMsg)) {
+                ?>
+                    <h5><?= $soldeMsg ?></h5>
+                <?php
+                }
+                ?>
                 <article class="identitie__infos">
                     <hgroup class="identitie_name--group">
                         <h2><?= $_SESSION["user_data"]["usr_first_name"] ?></h2>
@@ -95,7 +96,7 @@ require "include/head.php";
                             <option value="PKR">PKR - Pakistani Rupee</option>
                         </select>
                         <input type="number" name="solde_quantity" placeholder="Montant" id="soldadd">
-                        <input type="submit" value="+" name="add" id="addfounds">
+                        <input type="submit" value="+" name="addsold" id="addfounds">
                     </form>
                 </fieldset>
             </div>
@@ -115,7 +116,6 @@ require "include/head.php";
             </aside>
         </div>
     </footer>
-    <script src="assets/js/solde.js"></script>
 </body>
 
 </html>

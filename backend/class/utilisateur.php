@@ -2,7 +2,7 @@
 
 class Utilisateur
 {
-
+    public int $user_id;
     private string $user_f_name;
     private string $user_l_name;
     private string $user_mail;
@@ -14,6 +14,7 @@ class Utilisateur
 
 
     public function __construct(
+        int $userId,
         string $userFname,
         string $userLname,
         string $userMail,
@@ -22,7 +23,7 @@ class Utilisateur
         string $userCountry,
         float $userSolde,
     ) {
-
+        $this->user_id = $userId;
         $this->user_f_name = $userFname;
         $this->user_l_name = $userLname;
         $this->user_mail = $userMail;
@@ -32,6 +33,10 @@ class Utilisateur
         $this->user_solde = $userSolde;
     }
     //getters
+    public function getUsrId(): int
+    {
+        return $this->user_id;
+    }
     public function getUsrFname(): string
     {
         return $this->user_f_name;
