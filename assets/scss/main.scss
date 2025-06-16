@@ -257,32 +257,60 @@ body {
       width: 100%;
       margin: 0;
       padding: 5px;
-      background: radial-gradient(
-        circle,
-        rgba(213, 110, 110, 1) 0%,
-        rgba(148, 187, 233, 1) 100%
-      );
+      background-color: rgba(0, 0, 0, 0.785);
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
       justify-content: space-evenly;
+      & .success__msg {
+        margin: auto;
+        position: absolute;
+        color: cornflowerblue;
+        font-size: $big-font-size;
+        font-family: $font-secondary;
+        animation: msg 4s ease 0s 1 normal forwards;
+        text-shadow: $header-txt-shad;
+      }
+      @keyframes msg {
+        0% {
+          transform: scale(0.5);
+          opacity: 1;
+        }
+        25% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 1;
+        }
+        75% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
       & .identitie__infos {
         height: 45vh;
         width: 20vw;
-        padding-left: 8px;
         border: 3px solid #fff;
         border-radius: 10px;
         display: flex;
         flex-flow: column nowrap;
-        align-items: flex-start;
+        align-items: center;
         justify-content: space-evenly;
         font-size: $standar-font-size;
         font-family: $font-secondary;
         color: #000;
         letter-spacing: 2px;
         font-weight: 300;
+        & p {
+          color: #fff;
+        }
 
         & .identitie_name--group {
+          color: #fff;
           height: auto;
           width: 100%;
           display: flex;
@@ -303,12 +331,14 @@ body {
         align-items: center;
         justify-content: space-evenly;
         & h4 {
+          color: #fff;
           letter-spacing: 2px;
           margin: 0;
           font-size: $medium-font-size;
           text-decoration: underline;
         }
         & p {
+          color: #fff;
           letter-spacing: 2px;
           margin: 0;
           font-size: $medium-font-size;
@@ -326,6 +356,7 @@ body {
         justify-content: space-evenly;
         font-family: $font-secondary;
         & h2 {
+          color: #fff;
           letter-spacing: 2px;
           margin: 0;
           font-size: $medium-font-size;
@@ -339,12 +370,47 @@ body {
           overflow-y: scroll;
           overflow-x: hidden;
         }
+        & .transac__options{
+          padding: 0;
+          margin: 0;
+          height: auto;
+          width: 19vw;
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: center;
+          justify-content: space-around;
+          background-color: #000;
+          border-radius: 10px;
+          & li{
+            list-style-type: none;
+          }
+          & .transac__options--items{
+            color: #fff;
+            letter-spacing: 1px;
+          }
+          & .transac__options--items{
+            font-size: $standar-font-size;
+            color: #fff;
+            letter-spacing: 1px;
+            text-decoration: none;
+          }
+          & .transac__options--items:hover{
+            transition: 0.3s ease;
+            filter: drop-shadow(0px 0px 2px cornflowerblue);
+            color: cornflowerblue;
+            text-decoration: underline;
+            & i{
+              color: greenyellow;
+            }
+          }
+        }
       }
       & .founds__field {
         height: 45vh;
         width: auto;
         border-radius: 10px;
         & legend {
+          color: #fff;
           font-size: $medium-font-size;
           font-family: $font-secondary;
           text-align: center;
@@ -392,6 +458,7 @@ body {
       }
     }
   }
+  /////////////////FOOTER//////////////////////////////////////
   & footer {
     position: relative;
     bottom: 0;

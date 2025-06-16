@@ -1,2 +1,2 @@
 <?php
-$main_title = "Convert & Transfer";
+$main_title = "Numericash";

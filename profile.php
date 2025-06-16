@@ -2,7 +2,6 @@
 require "backend/security/sessionSecure.php";
 require "backend/script/solde/solde.php";
 require "include/title.php";
-var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -29,7 +28,7 @@ require "include/head.php";
                 <?php
                 if (isset($soldeMsg)) {
                 ?>
-                    <h5><?= $soldeMsg ?></h5>
+                    <h5 class="success__msg"><?= $soldeMsg ?></h5>
                 <?php
                 }
                 ?>
@@ -48,9 +47,19 @@ require "include/head.php";
                     <p><?= $_SESSION["user_data"]["usr_solde"] ?></p>
                 </div>
                 <article class="transaction__infos">
+                    <ul class="transac__options">
+                        <li>
+                            <a href="transfert.php" class="transac__options--items">Transfert <i class="fa-solid fa-arrow-right"></i></a>
+                        </li>
+                        <li>
+                            <a href="contacts.php" class="transac__options--items">Bénéficiaires <i class="fa-solid fa-users"></i></a>
+                        </li>
+                        <li>
+                            <a href="stats.php" class="transac__options--items">Statistiques <i class="fa-solid fa-chart-line"></i></a>
+                        </li>
+                    </ul>
                     <h2>Historique des transactions</h2>
                     <div class="transaction__listing" id="listing">
-
                     </div>
                 </article>
                 <fieldset class="founds__field">
@@ -95,8 +104,8 @@ require "include/head.php";
                             <option value="RON">RON - Romanian Leu</option>
                             <option value="PKR">PKR - Pakistani Rupee</option>
                         </select>
-                        <input type="number" name="solde_quantity" placeholder="Montant" id="soldadd">
-                        <input type="submit" value="+" name="addsold" id="addfounds">
+                        <input type="number" name="solde_quantity" placeholder="Montant">
+                        <input type="submit" value="+" name="addsold">
                     </form>
                 </fieldset>
             </div>

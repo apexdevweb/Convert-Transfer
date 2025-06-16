@@ -27,7 +27,7 @@ require "include/head.php";
       <div class="home__container">
         <h2 class="main__subtitle">Home</h2>
         <article class="main__article--container">
-          <p class='main__info--txt'><span>B</span>ienvenue sur <strong>Convert & Transfer</strong> qui a été développé
+          <p class='main__info--txt'><span>B</span>ienvenue sur <strong>Numericash</strong> qui a été développé
             en <strong>HTML5</strong>,<strong>SASS</strong>,<strong>JAVASCRIPT</strong>, <strong>PHP</strong> et
             <strong>MYSQL</strong> afin de
             faciliter les conversions et

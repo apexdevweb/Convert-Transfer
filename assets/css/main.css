@@ -251,21 +251,48 @@ body main .interface__container--primary {
   width: 100%;
   margin: 0;
   padding: 5px;
-  background: radial-gradient(circle, rgb(213, 110, 110) 0%, rgb(148, 187, 233) 100%);
+  background-color: rgba(0, 0, 0, 0.785);
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-evenly;
 }
+body main .interface__container--primary .success__msg {
+  margin: auto;
+  position: absolute;
+  color: cornflowerblue;
+  font-size: 2.9rem;
+  font-family: "Bebas Neue", serif;
+  animation: msg 4s ease 0s 1 normal forwards;
+  text-shadow: 0px 0px 5px #000;
+}
+@keyframes msg {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 body main .interface__container--primary .identitie__infos {
   height: 45vh;
   width: 20vw;
-  padding-left: 8px;
   border: 3px solid #fff;
   border-radius: 10px;
   display: flex;
   flex-flow: column nowrap;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-evenly;
   font-size: 1.2rem;
   font-family: "Bebas Neue", serif;
@@ -273,7 +300,11 @@ body main .interface__container--primary .identitie__infos {
   letter-spacing: 2px;
   font-weight: 300;
 }
+body main .interface__container--primary .identitie__infos p {
+  color: #fff;
+}
 body main .interface__container--primary .identitie__infos .identitie_name--group {
+  color: #fff;
   height: auto;
   width: 100%;
   display: flex;
@@ -294,12 +325,14 @@ body main .interface__container--primary .solde__utilisateur {
   justify-content: space-evenly;
 }
 body main .interface__container--primary .solde__utilisateur h4 {
+  color: #fff;
   letter-spacing: 2px;
   margin: 0;
   font-size: 1.7rem;
   text-decoration: underline;
 }
 body main .interface__container--primary .solde__utilisateur p {
+  color: #fff;
   letter-spacing: 2px;
   margin: 0;
   font-size: 1.7rem;
@@ -317,6 +350,7 @@ body main .interface__container--primary .transaction__infos {
   font-family: "Bebas Neue", serif;
 }
 body main .interface__container--primary .transaction__infos h2 {
+  color: #fff;
   letter-spacing: 2px;
   margin: 0;
   font-size: 1.7rem;
@@ -329,12 +363,47 @@ body main .interface__container--primary .transaction__infos .transaction__listi
   overflow-y: scroll;
   overflow-x: hidden;
 }
+body main .interface__container--primary .transaction__infos .transac__options {
+  padding: 0;
+  margin: 0;
+  height: auto;
+  width: 19vw;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #000;
+  border-radius: 10px;
+}
+body main .interface__container--primary .transaction__infos .transac__options li {
+  list-style-type: none;
+}
+body main .interface__container--primary .transaction__infos .transac__options .transac__options--items {
+  color: #fff;
+  letter-spacing: 1px;
+}
+body main .interface__container--primary .transaction__infos .transac__options .transac__options--items {
+  font-size: 1.2rem;
+  color: #fff;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+body main .interface__container--primary .transaction__infos .transac__options .transac__options--items:hover {
+  transition: 0.3s ease;
+  filter: drop-shadow(0px 0px 2px cornflowerblue);
+  color: cornflowerblue;
+  text-decoration: underline;
+}
+body main .interface__container--primary .transaction__infos .transac__options .transac__options--items:hover i {
+  color: greenyellow;
+}
 body main .interface__container--primary .founds__field {
   height: 45vh;
   width: auto;
   border-radius: 10px;
 }
 body main .interface__container--primary .founds__field legend {
+  color: #fff;
   font-size: 1.7rem;
   font-family: "Bebas Neue", serif;
   text-align: center;
