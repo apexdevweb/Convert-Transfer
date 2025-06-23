@@ -23,7 +23,7 @@ require "include/head.php";
         <hr class="main__hr--B" />
         <hr class="main__hr--C" />
         <section class="user__interface--container">
-
+            <div class="interface__container--primary"></div>
         </section>
         <hr class="main__hr--C" />
         <hr class="main__hr--B" />

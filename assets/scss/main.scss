@@ -65,6 +65,11 @@ body {
           letter-spacing: 2px;
           font-family: $font-secondary;
           list-style-type: none;
+          & .nav__li--link-name {
+            color: #000;
+            font-size: $medium-font-size;
+            text-decoration: underline;
+          }
           & .nav__li--link {
             color: #fff;
             font-size: $medium-font-size;
@@ -270,6 +275,7 @@ body {
         font-family: $font-secondary;
         animation: msg 4s ease 0s 1 normal forwards;
         text-shadow: $header-txt-shad;
+        letter-spacing: 1px;
       }
       @keyframes msg {
         0% {
@@ -370,7 +376,7 @@ body {
           overflow-y: scroll;
           overflow-x: hidden;
         }
-        & .transac__options{
+        & .transac__options {
           padding: 0;
           margin: 0;
           height: auto;
@@ -381,25 +387,25 @@ body {
           justify-content: space-around;
           background-color: #000;
           border-radius: 10px;
-          & li{
+          & li {
             list-style-type: none;
           }
-          & .transac__options--items{
+          & .transac__options--items {
             color: #fff;
             letter-spacing: 1px;
           }
-          & .transac__options--items{
+          & .transac__options--items {
             font-size: $standar-font-size;
             color: #fff;
             letter-spacing: 1px;
             text-decoration: none;
           }
-          & .transac__options--items:hover{
+          & .transac__options--items:hover {
             transition: 0.3s ease;
             filter: drop-shadow(0px 0px 2px cornflowerblue);
             color: cornflowerblue;
             text-decoration: underline;
-            & i{
+            & i {
               color: greenyellow;
             }
           }
@@ -453,6 +459,74 @@ body {
             transition: 0.3s ease;
             filter: drop-shadow(0px 0px 5px cornflowerblue);
             color: greenyellow;
+          }
+        }
+      }
+      & .transfert__field {
+        height: 45vh;
+        width: 80%;
+        border-radius: 10px;
+        & legend {
+          color: #fff;
+          font-size: $medium-font-size;
+          font-family: $font-secondary;
+          text-align: center;
+          letter-spacing: 2px;
+          text-decoration: underline;
+        }
+        & form {
+          background-color: #000;
+          height: 40vh;
+          width: 100%;
+          display: flex;
+          flex-flow: row wrap;
+          align-items: center;
+          justify-content: space-evenly;
+          border-radius: 10px;
+          & .transfert__sub-container {
+            height: 10vh;
+            min-width: 17vw;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: space-evenly;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            padding: 10px;
+            & label {
+              letter-spacing: 1px;
+              font-family: $font-secondary;
+              color: #fff;
+            }
+            & select {
+              height: 3vh;
+              width: 9vw;
+            }
+            & input[type="number"] {
+              height: 3vh;
+              width: 9vw;
+            }
+            & .transfert__separate{
+              height: 2px;
+              border: none;
+              width: 8vw;
+              background-color: #fff;
+            }
+            & input[type="submit"] {
+              text-align: center;
+              height: 4vh;
+              width: 5vw;
+              border-radius: 10px;
+              font-size: $standar-font-size;
+              border: 2px solid cornflowerblue;
+              background-color: #000;
+              color: #fff;
+            }
+            & input[type="submit"]:hover {
+              transition: 0.3s ease;
+              filter: drop-shadow(0px 0px 5px cornflowerblue);
+              color: greenyellow;
+            }
           }
         }
       }
