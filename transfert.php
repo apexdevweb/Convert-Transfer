@@ -25,6 +25,13 @@ require "include/head.php";
         <hr class="main__hr--C" />
         <section class="user__interface--container">
             <div class="interface__container--primary">
+                <?php
+                if (isset($soldeMsg)) {
+                ?>
+                    <h5 class="success__msg"><?= $soldeMsg ?></h5>
+                <?php
+                }
+                ?>
                 <fieldset class="transfert__field">
                     <legend>Transferer des fonds</legend>
                     <form method="POST" id="formfound">
@@ -32,6 +39,15 @@ require "include/head.php";
                             <label for="transfert__contact">Choisir un contact</label>
                             <select name="transfert__contact" required>
                                 <option value="..." selected>...</option>
+                                <?php
+                                foreach ($req_contact as $contacts) {
+                                    if (isset($contacts)) {
+                                ?>
+                                        <option value=""><?= $contacts['user_f_name'] . " " . $contacts['user_l_name'] . " " . $contacts['user_country'] ?></option>
+                                <?php
+                                    }
+                                }
+                                ?>
                             </select>
                         </div>
                         <div class="transfert__sub-container">
