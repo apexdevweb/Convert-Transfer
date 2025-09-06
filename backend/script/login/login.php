@@ -11,16 +11,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $mail_log_user = filter_var($_POST["user_log_mail"], FILTER_VALIDATE_EMAIL);
             $pass_log_user = htmlspecialchars($_POST["user_log_pass"]);
             // vérifie si l'agence existe
-            $data_usr_verif = $bdd->prepare("SELECT * FROM users WHERE user_mail = ?");
-            $data_usr_verif->execute([$mail_log_user]);
-
+            try {
+                $data_usr_verif = $bdd->prepare("SELECT * FROM users WHERE user_mail = ?");
+                $data_usr_verif->execute([$mail_log_user]);
+            } catch (PDOException $e) {
+                echo "Erreur de vérification" . $e->getMessage();
+            }
             if ($data_usr_verif->rowCount() > 0) {
 
-                // on vérifie si les mot de passe rentrer par l'agence correspond avec ceux de la database
                 $users_infos = $data_usr_verif->fetch();
                 $passdb = $users_infos['user_pass'];
-                if (password_verify($pass_log_user, $passdb)) {
 
+                // on vérifie si les mot de passe rentrer par l'agence correspond avec ceux de la database
+                if (password_verify($pass_log_user, $passdb)) {
+                    // alors si les mots de passes se correspondent on instancie l'utilisateur
                     $my_user = new Utilisateur(
                         $users_infos['user_id'],
                         $users_infos['user_f_name'],

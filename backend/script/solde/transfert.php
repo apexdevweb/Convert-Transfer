@@ -25,7 +25,7 @@ if (isset($_POST['foundTransfert'])) {
 
         try {
 
-            $bdd->beginTransaction();
+            $start_transac =  $bdd->beginTransaction();
 
             $req_transfert_expeditor = $bdd->prepare("SELECT user_solde FROM users WHERE users_id = ?");
             $req_transfert_expeditor->execute([$current_expeditor]);
@@ -40,17 +40,21 @@ if (isset($_POST['foundTransfert'])) {
                 throw new Exception("Solde insuffisant");
             }
 
-            // Débiter l'expéditeur
+
             $debitor = $bdd->prepare("UPDATE users SET user_solde = user_solde - ? WHERE user_id = ?");
             $debitor->execute([$device_quantity, $current_expeditor]);
 
-            // Créditer le destinataire
+
             $creditor = $bdd->prepare("UPDATE users SET user_solde = user_solde + ?, devise = ? WHERE user_id = ?");
             $creditor->execute([$device_quantity, $type_of_device,  $contact_transfert]);
 
-            $bdd->commit();
+            $validate_transac = $bdd->commit();
+
             $soldeMsg = "Transfert executer avec succès";
         } catch (PDOException $e) {
+
+            $cancel_transac = $bdd->rollBack();
+
             echo "Erreur de transaction : " . $e->getMessage();
         }
     }
